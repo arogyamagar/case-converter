@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 
 function App() {
+  const [mode, setMode] = useState("light");
+  const [name, setName] = useState("Enable DarkMode");
+  const toggleMode = () =>{
+    if (mode === "light"){
+      setMode('dark')
+      setName('Disable DarkMode')
+      document.body.style.backgroundColor="black";
+    }
+    else{
+      setMode('light')
+      setName('Enable DarkMode')
+      document.body.style.backgroundColor="white";
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Navbar title="Case Converter" name= {name} mode={mode} toggleMode = {toggleMode}/>
+    <div className="container my-3">
+      <TextForm heading="Enter The Text Below" mode={mode}/>
     </div>
-  );
+    </>
+    );
 }
 
 export default App;
