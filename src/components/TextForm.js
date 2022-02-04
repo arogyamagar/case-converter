@@ -3,28 +3,55 @@ import React, {useState} from 'react'
 export default function TextForm(props) {
     const [text, setText] = useState("");
     const handelUpCase = () => {
-        // console.log("You Have Clicked");
         let newText= text.toUpperCase();
         setText(newText);
+        if(text!==""){
+            props.showAlert("Changed to Uppercase", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelLoCase = () => {
-        // console.log("You Have Clicked");
         let newText= text.toLowerCase();
         setText(newText);
+        if(text!==""){
+            props.showAlert("Changed to Lowercase", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelClear = () => {
-        // console.log("You Have Clicked");
         let newText= '';
         setText(newText);
+        if(text!==""){
+            props.showAlert("Cleared", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelExtraSpaces = () =>{
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        if(text!==""){
+            props.showAlert("Removed extra spaces", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelCopy = () =>{
         let copyText = document.getElementById('myBox');
         copyText.select();
         navigator.clipboard.writeText(copyText.value);
+        if(text!==""){
+            props.showAlert("Copied to clipboard", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelCapitals =()=>{
         let arr=text.split(" ");
@@ -33,9 +60,14 @@ export default function TextForm(props) {
         }
         let newText =  arr.join(" ");
         setText(newText);
+        if(text!==""){
+            props.showAlert("All first letter is Capitalized", "success");
+        }
+        else{
+            props.showAlert("Enter Some Text", "warning");
+        }
     }
     const handelOnChange = (event) =>{
-        // console.log("On Change");
         setText(event.target.value);
     }
     
@@ -57,7 +89,7 @@ export default function TextForm(props) {
     <div className="container" style={{color: props.mode==="dark"?"white":"black"}}>
         <h2>Text Summary</h2>
         <strong>Number of Words:</strong> {text.split(" ").length} <br/>
-        <strong>Number of Letters:</strong> {text.length} <br/>
+        <strong>Number of Characters:</strong> {text.length} <br/>
         <strong>Time to Read:</strong> {text.split(" ").length * 0.008} Minutes
     </div>
 
