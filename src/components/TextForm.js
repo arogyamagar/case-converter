@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 export default function TextForm(props) {
     const [text, setText] = useState("");
     const handelUpCase = () => {
-        // console.log("You Have Clicked");
         let newText= text.toUpperCase();
         setText(newText);
         if(text!==""){
@@ -14,7 +13,6 @@ export default function TextForm(props) {
         }
     }
     const handelLoCase = () => {
-        // console.log("You Have Clicked");
         let newText= text.toLowerCase();
         setText(newText);
         if(text!==""){
@@ -25,14 +23,13 @@ export default function TextForm(props) {
         }
     }
     const handelClear = () => {
-        // console.log("You Have Clicked");
         let newText= '';
         setText(newText);
         if(text!==""){
             props.showAlert("Cleared", "success");
         }
         else{
-            props.showAlert("Enter Some Text", "warning");
+            props.showAlert("Nothing to clear", "warning");
         }
     }
     const handelExtraSpaces = () =>{
@@ -69,7 +66,6 @@ export default function TextForm(props) {
         }
     }
     const handelOnChange = (event) =>{
-        // console.log("On Change");
         setText(event.target.value);
     }
     
