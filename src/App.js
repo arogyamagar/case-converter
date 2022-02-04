@@ -33,7 +33,7 @@ function App() {
   }
   return (
     <>
-    <Navbar title="My App" about="About me" name= {name} mode={mode} toggleMode = {toggleMode}/>
+    <Navbar title="Case Converter" name= {name} mode={mode} toggleMode = {toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
       <TextForm showAlert={showAlert} heading="Enter The Text Below" mode={mode}/>
