@@ -13,7 +13,7 @@ export default function About(props) {
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div style={{backgroundColor: props.mode==="dark"?"black":"white",color: props.mode==="dark"?"white":"black"}} className="accordion-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora, eaque asperiores sint veritatis laboriosam nobis illo sapiente saepe ullam nisi perferendis fugit id illum, optio porro consequuntur aliquam reprehenderit!
+                    It will help you to analyze your text easily and efficiently
                 </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ export default function About(props) {
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div style={{backgroundColor: props.mode==="dark"?"black":"white",color: props.mode==="dark"?"white":"black"}} className="accordion-body">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eius quo consequuntur officiis earum natus aspernatur reiciendis quia excepturi nesciunt, dignissimos doloremque porro quis itaque deserunt. Delectus expedita iure suscipit.
+                    No copyrigt free to edit.
                 </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export default function About(props) {
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div style={{backgroundColor: props.mode==="dark"?"black":"white",color: props.mode==="dark"?"white":"black"}} className="accordion-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate sit accusantium beatae aliquid praesentium cupiditate labore perspiciatis, vel officiis sapiente corporis recusandae, temporibus maxime voluptates vero optio consequuntur non!    
+                Can run in any browser
                 </div>
                 </div>
             </div>
